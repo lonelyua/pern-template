@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import css from './styles.scss';
-import packageJson from '../../../../package.json';
+import React, { FC } from "react";
+import packageJson from "../../../../package.json";
+import * as css from "./styles.scss";
 
 const { version, name, author } = packageJson;
 

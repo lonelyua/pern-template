@@ -1,5 +1,6 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { Configuration } from "webpack";
 import { fileURLToPath } from "url";
 import _webpackDevServer from "webpack-dev-server";
@@ -12,7 +13,6 @@ const config: Configuration = {
   output: {
     filename: "bundle.[hash].js",
     path: path.resolve(__dirname, "build"),
-    publicPath: "/",
   },
   resolve: {
     modules: [
@@ -34,14 +34,10 @@ const config: Configuration = {
       {
         test: /\.scss$/,
         use: [
-          // { loader: MiniCssExtractPlugin.loader },
+          { loader: MiniCssExtractPlugin.loader },
           { loader: "css-loader", options: { modules: true } },
           { loader: "sass-loader" },
         ],
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
       },
     ],
   },
@@ -50,6 +46,7 @@ const config: Configuration = {
       // favicon: path.resolve(__dirname, "public/favicon.ico"),
       template: path.resolve(__dirname, "public/index.html"),
     }),
+    new MiniCssExtractPlugin(),
   ],
   devServer: {
     client: {

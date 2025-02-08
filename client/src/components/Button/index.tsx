@@ -1,6 +1,6 @@
 import React, { FC, JSX } from "react";
 import { Link } from "react-router-dom";
-import css from "./styles.scss";
+import * as css from "./styles.scss";
 
 interface IButton {
   className?: string;
