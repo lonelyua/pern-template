@@ -1,13 +1,12 @@
 // sort-imports-ignore
-import React, { FC } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { Toast } from 'components';
-import { Footer, Header } from 'compositions';
-import routes, { URLS } from 'routes';
+import React, { FC } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Footer, Header } from "compositions";
+import routes, { URLS } from "routes";
 
-import 'styles/reset.scss';
-import 'styles/fonts.scss';
-import 'styles/common.scss';
+import "styles/reset.scss";
+import "styles/fonts.scss";
+import "styles/common.scss";
 
 const App: FC = () => {
   return (
@@ -30,7 +29,6 @@ const App: FC = () => {
           );
         })}
       </Routes>
-      <Toast />
     </>
   );
 };
