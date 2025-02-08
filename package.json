@@ -1,0 +1,21 @@
+{
+  "name": "pern-template",
+  "version": "1.0.0",
+  "engines": {
+    "node": "v22.13.1"
+  },
+  "description": "PERN stack template with latest package versions",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lonelyua/pern-template.git"
+  },
+  "author": "lonelyua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lonelyua/pern-template/issues"
+  },
+  "homepage": "https://github.com/lonelyua/pern-template#readme"
+}
