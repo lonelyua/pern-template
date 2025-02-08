@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/lonelyua/pern-template/issues"
   },
-  "homepage": "https://github.com/lonelyua/pern-template#readme"
+  "homepage": "https://github.com/lonelyua/pern-template#readme",
+  "dependencies": {
+    "typescript": "^5.7.3"
+  }
 }
