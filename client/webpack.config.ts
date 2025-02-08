@@ -11,8 +11,9 @@ const __dirname = path.dirname(__filename);
 const config: Configuration = {
   entry: path.resolve(__dirname, "src/index.tsx"),
   output: {
-    filename: "bundle.[hash].js",
+    filename: "bundle.[fullhash].js",
     path: path.resolve(__dirname, "build"),
+    clean: true,
   },
   resolve: {
     modules: [
