@@ -1,5 +1,6 @@
-@import "styles/variables.scss";
-@import "styles/mixins.scss";
+@use "styles/variables.scss" as *;
+@use "styles/mixins.scss" as *;
+@use "sass:color";
 
 .button {
   background: none;
@@ -37,7 +38,7 @@
   color: $color-white;
 
   &:hover {
-    background-color: lighten($color-chambray, 10%);
+    background-color: color.adjust($color-chambray, $lightness: 10%);
   }
 }
 
@@ -46,7 +47,7 @@
   color: $color-white;
 
   &:hover {
-    background-color: lighten($color-calypso, 10%);
+    background-color: color.adjust($color-calypso, $lightness: 10%);
   }
 }
 
@@ -55,7 +56,7 @@
   color: inherit;
 
   &:hover {
-    background-color: lighten($color-tundora, 10%);
+    background-color: color.adjust($color-tundora, $lightness: 10%);
   }
 }
 
