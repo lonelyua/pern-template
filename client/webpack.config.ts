@@ -8,22 +8,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const config: Configuration = {
-  entry: "./client/src/index.tsx",
+  entry: path.resolve(__dirname, "src/index.tsx"),
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "bundle.[hash].js",
+    path: path.resolve(__dirname, "build"),
     publicPath: "/",
   },
   resolve: {
     modules: [
-      path.resolve(__dirname, "./client/src"),
+      path.resolve(__dirname, "src"),
       path.resolve(__dirname, "../node_modules"),
     ],
     extensions: [".ts", ".tsx", ".js"],
-    // alias: {
-    //   "react/jsx-dev-runtime": "react/jsx-dev-runtime.js",
-    //   "react/jsx-runtime": "react/jsx-runtime.js",
-    // },
   },
   module: {
     rules: [
@@ -51,7 +47,8 @@ const config: Configuration = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "client/public/index.html",
+      // favicon: path.resolve(__dirname, "public/favicon.ico"),
+      template: path.resolve(__dirname, "public/index.html"),
     }),
   ],
   devServer: {
