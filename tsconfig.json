@@ -6,13 +6,14 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "jsx": "react-jsx"
-    // "moduleResolution": "node"
+    "jsx": "react-jsx",
+    "moduleResolution": "node10"
   },
   "include": [
     "client/src/**/*.ts",
     "client/src/**/*.tsx",
-    "server/src/**/*.ts"
+    "server/src/**/*.ts",
+    "global.d.ts"
   ],
   "exclude": ["node_modules"]
 }
