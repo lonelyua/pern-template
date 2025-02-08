@@ -1,9 +1,13 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { Configuration } from "webpack";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const config: Configuration = {
-  entry: "src/index.tsx",
+  entry: "./client/src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -25,20 +29,31 @@ const config: Configuration = {
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            // options: {
+            //   sassOptions: {
+            //     includePaths: [path.resolve(__dirname, "./client/src")],
+            //   },
+            // },
+          },
+        ],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "public/index.html",
+      template: "client/public/index.html",
     }),
   ],
-  devServer: {
-    static: path.join(__dirname, "dist"),
-    hot: true,
-    historyApiFallback: true,
-  },
+  // devServer: {
+  //   static: path.join(__dirname, "dist"),
+  //   hot: true,
+  //   historyApiFallback: true,
+  // },
 };
 
 export default config;
