@@ -5,7 +5,6 @@ import { Footer, Header } from "compositions";
 import routes, { URLS } from "routes";
 
 import "styles/reset.scss";
-import "styles/fonts.scss";
 import "styles/common.scss";
 
 const App: FC = () => {
