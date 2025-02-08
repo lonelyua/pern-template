@@ -1,0 +1,14 @@
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+.footer {
+  background-color: $color-black-glass;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: $footer-height;
+  font-size: 12px;
+  cursor: default;
+}

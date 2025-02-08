@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": ["es2020", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "rootDirs": ["."],
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2020",
+    "types": ["node"]
+  },
+  "exclude": ["node_modules"]
+}

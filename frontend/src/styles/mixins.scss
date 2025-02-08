@@ -1,0 +1,5 @@
+@mixin text-cropping {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

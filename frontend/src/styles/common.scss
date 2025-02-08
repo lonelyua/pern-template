@@ -1,0 +1,55 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+:global {
+  body {
+    margin: 0;
+    background-image: url("../assets/images/main.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $color-shark;
+    font-family: "Lato", serif;
+    font-size: $font-size-3;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-biloba;
+    transition: 0.2s color linear;
+
+    &:hover {
+      color: lighten($color-blue-chalk, 3%);
+    }
+  }
+
+  .leaflet-container {
+    height: 100%;
+    width: 100%;
+
+    .leaflet-popup {
+      width: 240px;
+      // min-height: 100px;
+
+      .leaflet-popup-content-wrapper {
+        padding: $padding-default;
+        border-radius: $border-radius-small;
+        box-shadow: $box-shadow;
+        color: $color-white;
+        background-color: darken($color-tundora, 5%);
+
+        .leaflet-popup-content {
+          margin: 0;
+          line-height: 1;
+          font-size: 14px;
+        }
+      }
+
+      .leaflet-popup-close-button {
+        width: $padding-default;
+        height: $padding-default;
+        line-height: $padding-default;
+      }
+    }
+  }
+}

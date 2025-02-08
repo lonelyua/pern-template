@@ -1,0 +1,17 @@
+@import "styles/variables.scss";
+
+.main {
+  background-color: $color-mine-shaft;
+  border-radius: $border-radius-default;
+  color: $color-white;
+  height: calc(100vh - #{$header-height} - #{$footer-height} - (#{$padding-default} * 2));
+  margin: $padding-default;
+  padding: $padding-default;
+  width: calc(100% - (#{$padding-default} * 2));
+}
+
+@media screen and (max-height: 600px) {
+  .main {
+    height: auto;
+  }
+}
