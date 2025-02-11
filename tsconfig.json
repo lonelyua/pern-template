@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
     "baseUrl": "client/src",
-    "target": "esnext",
-    "module": "esnext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
     "jsx": "react-jsx",
+    "module": "esnext",
     "moduleResolution": "node10",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext"
   },
   // "include": [
   //   "client/src/**/*.ts",

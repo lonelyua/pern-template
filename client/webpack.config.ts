@@ -4,6 +4,9 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { Configuration } from "webpack";
 import { fileURLToPath } from "url";
 import _webpackDevServer from "webpack-dev-server";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
