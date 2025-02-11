@@ -1,12 +1,12 @@
 // sort-imports-ignore
-import React, { FC } from "react";
-import { Route, Routes } from "react-router-dom";
-import { Footer, Header } from "compositions";
-import routes, { URLS } from "routes";
+import { FC } from 'react';
+import routes, { URLS } from 'routes';
+import { Route, Routes } from 'react-router-dom';
+import { Footer, Header } from 'compositions';
 
-import "styles/reset.scss";
-import "styles/fonts.scss";
-import "styles/common.scss";
+import 'styles/reset.scss';
+import 'styles/fonts.scss';
+import 'styles/common.scss';
 
 const App: FC = () => {
   return (

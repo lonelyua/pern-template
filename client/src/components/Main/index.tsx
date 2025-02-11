@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from "react";
-import * as css from "./styles.scss";
+import React, { FC, ReactNode } from 'react';
+import * as css from './styles.scss';
 
 interface IMain {
   loading?: boolean;
@@ -7,9 +7,7 @@ interface IMain {
   children?: ReactNode;
 }
 
-console.log("da bliat ", css);
-
-const Main: FC<IMain> = ({ children, className = "" }) => {
+const Main: FC<IMain> = ({ children, className = '' }) => {
   return <main className={`${css.main} ${className}`}>{children}</main>;
 };
 

@@ -6,7 +6,7 @@
   },
   "description": "PERN stack template with latest package versions",
   "scripts": {
-    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "lint": "eslint .",
     "build": "npm run client:build && npm run server:build",
     "client": "webpack serve --config client/webpack.config.ts --mode development --hot",
     "client:build": "webpack --config client/webpack.config.ts --mode production",

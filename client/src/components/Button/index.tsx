@@ -1,6 +1,6 @@
-import React, { FC, JSX } from "react";
-import { Link } from "react-router-dom";
-import * as css from "./styles.scss";
+import { FC, JSX } from 'react';
+import { Link } from 'react-router-dom';
+import * as css from './styles.scss';
 
 interface IButton {
   className?: string;
@@ -10,25 +10,25 @@ interface IButton {
   onClick?: (e: Event) => void;
   target?: string;
   text?: string;
-  type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary" | "icon" | "text";
+  type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary' | 'icon' | 'text';
 }
 
 const Button: FC<IButton> = ({
   className,
   disabled,
-  icon = "",
+  icon = '',
   link,
   onClick,
-  text = "",
-  type = "button",
-  variant = "primary",
+  text = '',
+  type = 'button',
+  variant = 'primary',
   ...props
 }) => {
   // TO DO: Fix any
   const handleClick = (e: any) => onClick && onClick(e);
 
-  const classNamesList = `${css.button} ${css[`btn-${variant}`]} ${disabled ? css["btn-disabled"] : ""} ${className}`;
+  const classNamesList = `${css.button} ${css[`btn-${variant}`]} ${disabled ? css['btn-disabled'] : ''} ${className}`;
 
   return (
     <>
