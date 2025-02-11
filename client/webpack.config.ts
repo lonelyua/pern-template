@@ -54,8 +54,7 @@ const config: Configuration = {
       logging: "none",
     },
     historyApiFallback: true,
-    // port: process.env.WEBPACK_SERVER_PORT,
-    port: 9005,
+    port: process.env.CLIENT_PORT || 3001,
   },
   performance: {
     hints: false,

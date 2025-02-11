@@ -6,12 +6,12 @@
   },
   "description": "PERN stack template with latest package versions",
   "scripts": {
-    "start": "concurrently \"npm run fe:start\" \"npm run be:start\"",
-    "build": "npm run fe:build && npm run be:build",
-    "fe:start": "webpack serve --config client/webpack.config.ts --mode development --hot",
-    "fe:build": "webpack --config client/webpack.config.ts --mode production",
-    "be:start": "ts-node server/src/app.ts",
-    "be:build": "webpack --config server/webpack.config.ts"
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "build": "npm run client:build && npm run server:build",
+    "client": "webpack serve --config client/webpack.config.ts --mode development --hot",
+    "client:build": "webpack --config client/webpack.config.ts --mode production",
+    "server": "ts-node server/src/app.ts",
+    "server:build": "webpack --config server/webpack.config.ts"
   },
   "repository": {
     "type": "git",

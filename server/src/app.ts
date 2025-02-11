@@ -1,14 +1,11 @@
 import cors from "cors";
-// import * as dotenv from "dotenv";
 import express from "express";
 import path from "path";
 import { MAX_UPLOAD_FILE_SIZE } from "./config";
 // import router from './routes';
 // import { connectToDB } from './utils';
 
-// dotenv.config();
-
-const PORT = process.env.SERVER_PORT || 3001;
+const PORT = process.env.SERVER_PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || "development";
 
 // connectToDB();
