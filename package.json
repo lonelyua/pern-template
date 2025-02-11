@@ -26,8 +26,8 @@
   "dependencies": {
     "axios": "^1.7.9",
     "babel-loader": "^9.2.1",
+    "cors": "^2.8.5",
     "css-loader": "^7.1.2",
-    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
@@ -47,6 +47,7 @@
     "@babel/core": "^7.26.8",
     "@babel/preset-env": "^7.26.8",
     "@babel/preset-react": "^7.26.3",
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^22.13.1",
     "@types/react": "^19.0.8",
