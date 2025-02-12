@@ -1,4 +1,3 @@
-// sort-imports-ignore
 import { FC } from 'react';
 import routes, { URLS } from 'routes';
 import { Route, Routes } from 'react-router-dom';
