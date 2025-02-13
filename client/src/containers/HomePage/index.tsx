@@ -1,7 +1,7 @@
-import React, { FC } from "react";
-import { Button, Main } from "components";
-import { URLS } from "routes";
-import * as css from "./styles.scss";
+import { FC } from 'react';
+import { Button, Main } from 'components';
+import { URLS } from 'routes';
+import * as css from './styles.scss';
 
 const HomePage: FC = () => {
   return (
