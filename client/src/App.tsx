@@ -4,7 +4,6 @@ import { Route, Routes } from 'react-router-dom';
 import { Footer, Header } from 'compositions';
 
 import 'styles/reset.scss';
-import 'styles/fonts.scss';
 import 'styles/common.scss';
 
 const App: FC = () => {
