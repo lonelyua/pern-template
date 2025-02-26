@@ -4,8 +4,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { Configuration } from 'webpack';
 import { fileURLToPath } from 'url';
-import _webpackDevServer from 'webpack-dev-server';
 import dotenv from 'dotenv';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import _webpackDevServer from 'webpack-dev-server';
 
 dotenv.config();
 

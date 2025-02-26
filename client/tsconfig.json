@@ -1,21 +1,22 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "react-jsx",
+
     "module": "esnext",
     "moduleResolution": "node10",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
     "resolveJsonModule": true,
+
+    "target": "esnext",
     "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "lib": ["esnext", "dom", "dom.iterable"],
+
     "strict": true,
-    "target": "esnext"
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true
   }
-  // "include": [
-  //   "src/**/*.ts",
-  //   "client/src/**/*.ts",
-  //   "client/src/**/*.tsx",
-  //   "server/src/**/*.ts",
-  //   "global.d.ts"
-  // ],
 }
