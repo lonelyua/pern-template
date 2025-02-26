@@ -1,15 +1,15 @@
-import { HomePage } from "containers";
+import { HomePage } from 'containers';
 
 export const URLS = {
-  HOME_PAGE: "/",
-  ROOT: "/",
+  HOME_PAGE: '/',
+  ROOT: '/',
 };
 
 export default [
   // Home Page
   {
     Component: HomePage,
-    name: "Home",
+    name: 'Home',
     path: URLS.HOME_PAGE,
   },
 ];

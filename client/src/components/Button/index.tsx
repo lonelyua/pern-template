@@ -1,4 +1,4 @@
-import { FC, JSX } from 'react';
+import { FC, JSX, MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import * as css from './styles.scss';
 
@@ -7,7 +7,7 @@ interface IButton {
   disabled?: boolean;
   icon?: JSX.Element;
   link?: string;
-  onClick?: (e: Event) => void;
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   target?: string;
   text?: string;
   type?: 'button' | 'submit' | 'reset';
@@ -25,9 +25,6 @@ const Button: FC<IButton> = ({
   variant = 'primary',
   ...props
 }) => {
-  // TO DO: Fix any
-  const handleClick = (e: any) => onClick && onClick(e);
-
   const classNamesList = `${css.button} ${css[`btn-${variant}`]} ${disabled ? css['btn-disabled'] : ''} ${className}`;
 
   return (
@@ -40,7 +37,7 @@ const Button: FC<IButton> = ({
       ) : (
         <button
           className={classNamesList}
-          onClick={handleClick}
+          onClick={onClick}
           type={type}
           disabled={disabled}
           {...props}
