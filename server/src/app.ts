@@ -3,15 +3,13 @@ import express from 'express';
 import path from 'path';
 import { MAX_UPLOAD_FILE_SIZE } from './config';
 import dotenv from 'dotenv';
-// import router from './routes';
-// import { connectToDB } from './utils';
+
+import itemRoutes from './routes/item.routes';
 
 dotenv.config();
 
 const PORT = process.env.SERVER_PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
-
-// connectToDB();
 
 const app = express();
 
@@ -19,7 +17,7 @@ app.use(cors());
 
 app.use(express.json({ limit: MAX_UPLOAD_FILE_SIZE }));
 
-// app.use("/api", router);
+app.use('/items', itemRoutes);
 
 if (NODE_ENV === 'development') {
   // app.use((err: any) => {
@@ -40,9 +38,7 @@ if (NODE_ENV === 'production') {
 }
 
 const server = app.listen(PORT, () => {
-  console.log(
-    `Server is running on http://localhost:${PORT} in mode ${NODE_ENV}`
-  );
+  console.log(`Server is running on http://localhost:${PORT} in mode ${NODE_ENV}`);
 });
 
 process.on('SIGINT', async () => {
