@@ -17,7 +17,7 @@ app.use(cors());
 
 app.use(express.json({ limit: MAX_UPLOAD_FILE_SIZE }));
 
-app.use('/items', itemRoutes);
+app.use('/api/items', itemRoutes);
 
 if (NODE_ENV === 'development') {
   // app.use((err: any) => {
