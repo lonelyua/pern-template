@@ -36,20 +36,20 @@ const HomePage: FC = () => {
     }
   };
 
-  const updateItem = async (item: Item) => {
-    setLoading(true);
-    try {
-      const response = await axios.patch(API.updateItem(item.id), item);
-      if (response) {
-        toast.success(response.data.message);
-        getItems();
-      }
-    } catch (error) {
-      handleError(error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  // const updateItem = async (item: Item) => {
+  //   setLoading(true);
+  //   try {
+  //     const response = await axios.patch(API.updateItem(item.id), item);
+  //     if (response) {
+  //       toast.success(response.data.message);
+  //       getItems();
+  //     }
+  //   } catch (error) {
+  //     handleError(error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   const deleteItem = async (id: number) => {
     setLoading(true);

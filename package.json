@@ -73,6 +73,7 @@
     "eslint-plugin-react": "^7.37.4",
     "prettier": "^3.5.0",
     "sass": "^1.84.0",
-    "ts-loader": "^9.5.2"
+    "ts-loader": "^9.5.2",
+    "globals": "^15.13.0"
   }
 }

@@ -6,15 +6,19 @@ import pluginReact from 'eslint-plugin-react';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'], settings: { react: { version: 'detect' } } },
-  // {
-  //   languageOptions: {
-  //     parser: tseslint.parser,
-  //     ecmaVersion: 'latest',
-  //     sourceType: 'module',
-  //     ecmaFeatures: { jsx: true },
-  //     globals: { ...globals.browser, ...globals.node, ...globals.es2021 },
-  //   },
-  // },
+  {
+    languageOptions: {
+      parser: tseslint.parser,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: { ...globals.browser, ...globals.node, ...globals.es2021 },
+    },
+  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,

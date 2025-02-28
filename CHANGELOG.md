@@ -6,8 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 ### Updates
-* add basic projects files
-* add default project settings
 ### Fixes
 
-<!-- ## 1.0.0 (Feb 10th, 2025) -->
+## 1.0.0 (Feb 28th, 2025)
+### Updates
+* add basic project files
+* add default settings for both client and server
+* set up the default structure
+* add documentation
+
