@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// TO DO: Need handle errors
+
 import { Request, Response } from 'express';
 import itemService from '../services/item.service';
 
