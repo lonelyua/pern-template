@@ -2,7 +2,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { Configuration } from 'webpack';
+import webpack from 'webpack';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -13,7 +13,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const config: Configuration = {
+const config: webpack.Configuration = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     filename: 'bundle.[fullhash].js',
@@ -50,6 +50,9 @@ const config: Configuration = {
       template: path.resolve(__dirname, 'public/index.html'),
     }),
     new MiniCssExtractPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env),
+    }),
   ],
   devServer: {
     client: {

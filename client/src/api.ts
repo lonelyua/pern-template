@@ -1,6 +1,4 @@
-// const ROOT_URL = `http://localhost:${process.env.SERVER_PORT}/api`;
-// TO DO
-const ROOT_URL = `http://localhost:5000/api`;
+const ROOT_URL = `http://localhost:${process.env.SERVER_PORT}/api`;
 
 export const API = {
   addItem: `${ROOT_URL}/items`,
