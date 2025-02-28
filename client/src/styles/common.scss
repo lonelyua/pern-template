@@ -1,0 +1,28 @@
+@use "variables.scss" as *;
+@use "mixins.scss" as *;
+@use "sass:color";
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:global {
+  body {
+    margin: 0;
+    background-image: url("../assets/images/main.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $color-shark;
+    font-family: "Lato", serif;
+    font-size: $font-size-3;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-biloba;
+    transition: 0.2s color linear;
+
+    &:hover {
+      color: color.adjust($color-blue-chalk, $lightness: 3%);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "styles/variables.scss" as *;
+@use "styles/mixins.scss" as *;
+
+.header {
+  background-color: $color-black-glass;
+  height: $header-height;
+  color: $color-white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: none;
+  font-size: 34px;
+  padding: 0 15px;
+  letter-spacing: 4px;
+  color: $color-blue-chalk;
+  text-decoration: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}

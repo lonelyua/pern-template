@@ -2,8 +2,8 @@
 /node_modules
 
 # build
-/frontend/build
-/backend/build
+/client/build
+/server/build
 
 # npm
 npm-debug.log*
