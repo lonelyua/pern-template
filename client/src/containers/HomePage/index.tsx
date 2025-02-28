@@ -76,9 +76,10 @@ const HomePage: FC = () => {
         {items.map(({ id, name }) => (
           <div className={css.row} key={id}>
             {name}
+            <Button text="Delete" onClick={() => deleteItem(id)} />
           </div>
         ))}
-        <Button text="Add new item" onClick={() => addItem({ name: 'Lorem' })} />
+        <Button text="Add new" onClick={() => addItem({ name: 'Lorem' })} />
       </div>
     </Main>
   );
